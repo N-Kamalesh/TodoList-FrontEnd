@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+body {
+  background-color: #dddd12;
+  font-family: "Architects Daughter", cursive;
+  line-height: 1.5;
+}
+
+/****************************** Container part ***************************/
+.container {
+  background-color: #ffffff;
+  background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+  background-size: 25px 25px;
+  border-radius: 28px;
+  box-shadow: 5px 5px 5px grey;
+  font-weight: 800;
+  max-width: 300px;
+  margin: 20px auto;
+  min-height: 500px;
+  padding: 20px;
+  text-align: left;
+  width: 80%;
+}
+
+/***************************** Heading Section ****************************/
+h1 {
+  background-color: #ffc906;
+  border-radius: 3px 0px 8px 15px;
+  margin: 30px auto;
+  text-align: center;
+  transform: rotate(3deg);
+  width: 200px;
+}
+
+/***************************** Form section ******************************/
+.form {
+  text-align: center;
+}
+.form input {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 28px;
+  box-shadow: 2px 5px 5px #7c7c7c;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 8px 18px;
+  width: 60%;
+}
+.form input:focus {
+  border: 2px solid #dddd12;
+}
+.form button {
+  background: #dddd12;
+  border: none;
+  border: 2px solid white;
+  box-shadow: 2px 5px 5px #7c7c7c;
+  border-radius: 28px;
+  cursor: pointer;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 5px;
+  padding: 0.5rem 0.7rem;
+}
+.form button:hover {
+  background-color: black;
+  border-color: #dddd12;
+  color: #dddd12;
+}
+
+/******************************** List Section *******************************/
+p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+.task {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.task label {
+  font-size: 1.2rem;
+  margin: auto 5px;
+}
+.task button {
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 3px 2px 1px;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 70px;
+}
+.btn-delete {
+  background-color: red;
+}
+.btn-delete:hover {
+  background-color: darkred;
+}
+.btn-edit {
+  background-color: blue;
+}
+.btn-edit:hover {
+  background-color: darkblue;
+}
+input:checked + label {
+  text-decoration: line-through;
+  text-decoration-color: #ffc906;
+}
+
+/*************************** Media Query **************************/
+@media (max-width: 400px) {
+  .task label {
+    font-size: 1rem;
+  }
+}
