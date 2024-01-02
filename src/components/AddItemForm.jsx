@@ -21,7 +21,8 @@ function AddItemForm({
   }
 
   //Function to add the task to the database
-  async function addTask() {
+  async function addTask(e) {
+    e.preventDefault();
     if (task.trim().length === 0) return;
     //post request with the task user entered
     try {
@@ -45,7 +46,8 @@ function AddItemForm({
   }
 
   //Function to update the task the user id
-  async function updateTask() {
+  async function updateTask(e) {
+    e.preventDefault();
     if (taskToEdit.trim().length === 0) {
       setIsUpdating(false);
       return;
@@ -72,7 +74,7 @@ function AddItemForm({
   }
 
   return (
-    <div className="form">
+    <form className="form" onSubmit={isUpdating ? updateTask : addTask}>
       <input
         autoFocus
         type="text"
@@ -80,10 +82,10 @@ function AddItemForm({
         value={isUpdating ? taskToEdit : task}
         onChange={handleChange}
       />
-      <button onClick={isUpdating ? updateTask : addTask}>
+      <button type="submit">
         {isUpdating ? "Update" : "Add"}
       </button>
-    </div>
+    </form>
   );
 }
 
